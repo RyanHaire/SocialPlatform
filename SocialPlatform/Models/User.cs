@@ -13,7 +13,7 @@ namespace SocialPlatform.Models
         public string LastName { get; set; }
         public string Username { get; set; }
         public string Email { get; set; }
-        public bool IsVerified { get; set; }
+        //public bool IsVerified { get; set; }
 
         // ONLINE, OFFLINE, AWAY
         public string OnlineStatus { get; set; }
