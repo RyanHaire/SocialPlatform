@@ -1,0 +1,21 @@
+﻿@model SocialPlatform.Models.User
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+@using(Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div>
+        <p>
+            @Html.LabelFor(model => model.Username)
+            @Html.EditorFor(model => model.Username)
+        </p>
+        <p>
+            
+        </p>
+    </div>
+}

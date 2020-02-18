@@ -135,6 +135,14 @@
     <Compile Include="Migrations\202002180042407_InitialCreate.designer.cs">
       <DependentUpon>202002180042407_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002180048393_AddedRequiredToFirstNameandLastName.cs" />
+    <Compile Include="Migrations\202002180048393_AddedRequiredToFirstNameandLastName.designer.cs">
+      <DependentUpon>202002180048393_AddedRequiredToFirstNameandLastName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002180111461_AddedConfirmpPassword.cs" />
+    <Compile Include="Migrations\202002180111461_AddedConfirmpPassword.designer.cs">
+      <DependentUpon>202002180111461_AddedConfirmpPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\Conversation.cs" />
@@ -180,6 +188,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\SignUp.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -200,6 +209,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202002180042407_InitialCreate.resx">
       <DependentUpon>202002180042407_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002180048393_AddedRequiredToFirstNameandLastName.resx">
+      <DependentUpon>202002180048393_AddedRequiredToFirstNameandLastName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002180111461_AddedConfirmpPassword.resx">
+      <DependentUpon>202002180111461_AddedConfirmpPassword.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

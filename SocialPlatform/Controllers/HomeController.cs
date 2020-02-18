@@ -43,10 +43,18 @@ namespace SocialPlatform.Controllers
         {
             if(ModelState.IsValid)
             {
+                if(db.Users.Any(o => o.Email.Equals(user.Email, StringComparison.InvariantCultureIgnoreCase)) || 
+                    db.Users.Any(o => o.Username.Equals(user.Username, StringComparison.InvariantCultureIgnoreCase)))
+                {
+                    ModelState.AddModelError("Error", "Username or Email already exists.");
+                    return View();
+                }
                 db.Users.Add(user);
                 db.SaveChanges();
+                ViewBag.SuccessMessage = "Successfully signed up.";
             }
-            return RedirectToAction("Index");
+            
+            return View();
         }
     }
 }

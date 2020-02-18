@@ -5,32 +5,51 @@
 
 <h2>SignUp</h2>
 
-@using(Html.BeginForm())
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken();
 
-<div>
-    <p>
-        @Html.LabelFor(model => model.FirstName)
-        @Html.EditorFor(model => model.FirstName)
-        @Html.ValidationMessageFor(model => model.FirstName)
-    </p>
-    <p>
-        @Html.LabelFor(model => model.LastName)
-        @Html.EditorFor(model => model.LastName)
-        @Html.ValidationMessageFor(model => model.LastName)
-    </p>
-    <p>
-        @Html.LabelFor(model => model.Username)
-        @Html.EditorFor(model => model.Username)
-        @Html.ValidationMessageFor(model => model.Username)
-    </p>
-    <p>
-        @Html.LabelFor(model => model.Email)
-        @Html.EditorFor(model => model.Email)
-        @Html.ValidationMessageFor(model => model.Email)
-    </p>
-    @Html.ActionLink("Login", "Login") | 
-    <input type="submit" value="Sign Up" />
-</div>
+    <div>
+        @if(ViewBag.SuccessMessage != null)
+        {
+            @ViewBag.SuccessMessage
+        }
+        @Html.ValidationMessage("Error")
+        <p>
+            @Html.LabelFor(model => model.FirstName)
+            @Html.EditorFor(model => model.FirstName)
+            @Html.ValidationMessageFor(model => model.FirstName)
+        </p>
+        <p>
+            @Html.LabelFor(model => model.LastName)
+            @Html.EditorFor(model => model.LastName)
+            @Html.ValidationMessageFor(model => model.LastName)
+        </p>
+        <p>
+            @Html.LabelFor(model => model.Username)
+            @Html.EditorFor(model => model.Username)
+            @Html.ValidationMessageFor(model => model.Username)
+        </p>
+        <p>
+            @Html.LabelFor(model => model.Email)
+            @Html.EditorFor(model => model.Email)
+            @Html.ValidationMessageFor(model => model.Email)
+        </p>
+        <p>
+            @Html.LabelFor(model => model.Password)
+            @Html.PasswordFor(model => model.Password)
+            @Html.ValidationMessageFor(model => model.Password)
+        </p>
+        <p>
+            @Html.LabelFor(model => model.ConfirmPassword)
+            @Html.PasswordFor(model => model.ConfirmPassword)
+            @Html.ValidationMessageFor(model => model.ConfirmPassword)
+        </p>
+        @Html.ActionLink("Login", "Login") |
+        <input type="submit" value="Sign Up" />
+    </div>
 }
+
+<script src='@Url.Content("~/Scripts/jquery-1.8.2.js")' type='text/javascript'></script>
+<script src='@Url.Content("~/Scripts/jquery.validate.js")' type='text/javascript'></script>
+<script src='@Url.Content("~/Scripts/jquery.validate.unobtrusive.js")' type='text/javascript'></script>
