@@ -8,11 +8,10 @@ namespace SocialPlatform.Models
     public class Post
     {
         public int Id { get; set; }
-        // FK
         public int UserId { get; set; }
         // Navigation property
         public User User { get; set; }
         public int Text { get; set; }
-        public List<Comment> Comments { get; set; }
+        public virtual List<Comment> Comments { get; set; }
     }
 }

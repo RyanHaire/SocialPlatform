@@ -8,7 +8,7 @@ namespace SocialPlatform.Models
     public class Conversation
     {
         public int Id { get; set; }
-        public List<User> Users { get; set; }
-        public List<Message> Messages { get; set; }
+        public virtual List<User> Users { get; set; }
+        public virtual List<Message> Messages { get; set; }
     }
 }
