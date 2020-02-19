@@ -10,6 +10,8 @@ namespace SocialPlatform.Models
 {
     public class SessionToken
     {
+
+        [Required]
         [ForeignKey("User")]
         public int Id { get; set; }
         public string Token { get; set; }

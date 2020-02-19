@@ -5,17 +5,35 @@
 
 <h2>Login</h2>
 
-@using(Html.BeginForm())
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-
+    @Html.ValidationMessage("LoginError")
     <div>
         <p>
             @Html.LabelFor(model => model.Username)
             @Html.EditorFor(model => model.Username)
         </p>
         <p>
-            
+            @Html.LabelFor(model => model.Password)
+            @Html.PasswordFor(model => model.Password, new { id = "passwordField" })
+            <input type="checkbox" id="showPassword" />
         </p>
+        @Html.ActionLink("Sign Up", "SignUp")
+        <input type="submit" value="Login" />
+
     </div>
 }
+
+
+<script>
+    var checkbox = document.getElementById("showPassword");
+    var passwordField = document.getElementById("passwordField");
+    checkbox.addEventListener("change", function () {
+        if (this.checked) {
+            passwordField.type = "text";
+        } else {
+            passwordField.type = "password";
+        }
+    })
+</script>

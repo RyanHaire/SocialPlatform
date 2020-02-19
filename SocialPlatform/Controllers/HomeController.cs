@@ -27,9 +27,14 @@ namespace SocialPlatform.Controllers
         {
             if(ModelState.IsValid)
             {
-
+                if(db.Users.Any(o => o.Username.ToLower() == user.Username.ToLower()) 
+                    && db.Users.Any(o => o.Password == user.Password))
+                {
+                    return RedirectToAction("Index");
+                }
             }
-            return RedirectToAction("Index");
+            ModelState.AddModelError("LoginError", "Username or password was incorrect.");
+            return View();
         }
 
         public ActionResult SignUp()

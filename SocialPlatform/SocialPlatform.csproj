@@ -143,6 +143,14 @@
     <Compile Include="Migrations\202002180111461_AddedConfirmpPassword.designer.cs">
       <DependentUpon>202002180111461_AddedConfirmpPassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002190505409_AddedForeignKeyToSessionToken.cs" />
+    <Compile Include="Migrations\202002190505409_AddedForeignKeyToSessionToken.designer.cs">
+      <DependentUpon>202002190505409_AddedForeignKeyToSessionToken.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002190532080_AddingUserFields.cs" />
+    <Compile Include="Migrations\202002190532080_AddingUserFields.designer.cs">
+      <DependentUpon>202002190532080_AddingUserFields.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\Conversation.cs" />
@@ -215,6 +223,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002180111461_AddedConfirmpPassword.resx">
       <DependentUpon>202002180111461_AddedConfirmpPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002190505409_AddedForeignKeyToSessionToken.resx">
+      <DependentUpon>202002190505409_AddedForeignKeyToSessionToken.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002190532080_AddingUserFields.resx">
+      <DependentUpon>202002190532080_AddingUserFields.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
